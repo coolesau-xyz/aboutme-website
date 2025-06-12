@@ -28,7 +28,7 @@
     body {
       height: 100%;
       font-family: 'Press Start 2P', monospace;
-      background-color: #1b1c1e;
+      background-color: #222325;
       color: white;
       overflow-x: hidden;
       scroll-behavior: smooth;
@@ -50,6 +50,7 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       z-index: 1000;
       width: 90%;
+      font-size: 0.7rem;
     }
 
     .glass-nav-inner {
@@ -57,6 +58,7 @@
       gap: 1.4rem;
       align-items: center;
       justify-content: center;
+
     }
 
     .glass-item {
@@ -74,6 +76,20 @@
       line-height: 1;
     }
 
+
+
+    .heart-icon {
+      height: 14px;
+      margin-right: 6px;
+      vertical-align: middle;
+      transition: all 0.2s ease;
+    }
+
+    .glass-item:hover .heart-icon {
+      content: url('assets/heart.png');
+    }
+
+
     .glass-nav-inner {
       display: flex;
       justify-content: space-between;
@@ -83,30 +99,11 @@
       gap: 1rem;
     }
 
-    .nav-left {
-      font-size: 0.8rem;
-      font-weight: bold;
-      color: white;
-    }
-
-    .nav-center {
-      display: flex;
-      gap: 1.2rem;
-    }
-
     .nav-right .donate-button {
-      background: rgba(255, 255, 255, 0.15);
-      padding: 0.5rem 1rem;
-      border-radius: 999px;
       color: white;
       text-decoration: none;
-      font-size: 0.7rem;
       transition: background 0.3s ease;
       font-family: 'Press Start 2P', monospace;
-    }
-
-    .nav-right .donate-button:hover {
-      background: rgba(255, 255, 255, 0.3);
     }
 
     .glass-item span {
@@ -114,13 +111,11 @@
       line-height: 1;
       position: relative;
       top: 1px;
-      font-size: 0.8rem;
     }
 
     .glass-item i {
-      font-size: 1rem;
       vertical-align: middle;
-      display: none;
+      display: flex;
       align-items: center;
     }
 
@@ -131,23 +126,30 @@
     }
 
     @media (max-width: 600px) {
+  .glass-navbar {
+    width: 90%;
+    top: 45px;
+    border-radius: 20px;
+  }
 
-      .glass-item {
-        padding: 0.4rem;
-        font-size: 1rem;
-      }
+  .glass-nav-inner {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 0.6rem;
+    padding: 0.6rem 0.8rem;
+    flex-wrap: nowrap;
+  }
 
-      .glass-nav-inner {
-        flex-direction: column;
-        align-items: center;
-      }
+  .glass-item {
+    font-size: 0.55rem;
+    padding: 0.4rem 0.6rem;
+  }
 
-      .nav-left,
-      .nav-right {
-        display: none;
-      }
-    }
-
+  .glass-item img {
+    width: 12px;
+    height: 12px;
+  }
+}
 
 
     .hero {
@@ -493,24 +495,21 @@
 
   <header class="glass-navbar">
     <nav class="glass-nav-inner">
-      <div class="nav-left">cooleSau</div>
-
-      <div class="nav-center">
-        <a href="#home" class="glass-item"><i class="fas fa-home"></i><span>Home</span></a>
-        <a href="#projects" class="glass-item"><i class="fa-solid fa-box-archive"></i><span>Projects</span></a>
+      <div class="nav-left"><a href="#home" class="glass-item"></i><span>About</span></a>
+        <a href="#projects" class="glass-item"><span>Projects</span></a>
       </div>
-
       <div class="nav-right">
-        <a href="#donate" class="donate-button">Donate</a>
+        <a target="_blank" href="https://paypal.me/coolesauxyz?country.x=AT&locale.x=de_DE" class="glass-item"><img
+            src="assets/heart-2.png" alt="Heart" class="heart-icon"> Donate </a>
       </div>
     </nav>
   </header>
 
-  <div class="hero">
+  <div class="hero" id="home">
 
     <div class="card">
       <div class="profile-row">
-        <img src="assets/avatar.png" alt="avatar" class="avatar" />
+        <img src="assets/avatar.jpeg" alt="avatar" class="avatar" />
         <div class="profile-text">
           <div class="username-badge-row">
             <div class="username">cooleSau</div>
@@ -557,8 +556,36 @@
       </div>
     </div>
   </div>
-  <div class="main-content">
+  <div class="main-content" id="projects" style="display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: 'Press Start 2P', monospace; color: white;">
+  <div style="text-align: center;">
+    <div style="
+      font-size: 1rem;
+      animation: pulse 1.5s infinite;
+      color: #ffffff;
+      text-shadow: 0 0 10px #ffffff33;
+    ">
+      Coming soon...
+    </div>
   </div>
+</div>
+
+<!-- Animation direkt eingebettet -->
+<style>
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+</style>
 
   <script>
     const texts = [
