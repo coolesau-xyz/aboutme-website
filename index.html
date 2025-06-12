@@ -16,6 +16,7 @@
 
     body {
       font-family: 'Press Start 2P', monospace;
+      background-color: black;
       color: white;
       background: url('assets/background.png') no-repeat center center/cover;
       height: 100vh;
@@ -27,14 +28,31 @@
 
     .card {
       backdrop-filter: blur(10px);
-      background-color: rgba(74, 74, 74, 0.692);
+      background-color: rgba(32, 32, 32, 0.692);
       border: 1px solid #ffffff;
       border-radius: 20px;
       padding: 2rem;
       padding-bottom: 1rem;
       width: 90%;
       max-width: 480px;
-      box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+      border-radius: 0px;
+      /* keine Rundung – pixelig! */
+      padding: 2rem;
+      width: 90%;
+      max-width: 480px;
+
+      /* "Pixel"-Schatten */
+      box-shadow:
+        0 0 0 4px #000,
+        /* innerer schwarzer Rahmen */
+        8px 8px 0 0 #222,
+        /* pixeliger Versatz */
+        12px 12px 0 0 #000;
+      /* zweiter Pixel-Block */
+
+      image-rendering: pixelated;
+      /* falls du pixelige Bilder nutzt */
+      font-family: 'Press Start 2P', monospace;
     }
 
     .profile-row {
@@ -49,8 +67,15 @@
       width: 80px;
       height: 80px;
       border-radius: 99px;
-      flex-shrink: 0;
-      border: #ffffff solid 0.5px;
+      /* leicht eckig statt rund */
+      image-rendering: pixelated;
+      /* Retro-Schärfe */
+      background-color: #1a1a1a;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .avatar:hover {
+      transform: scale(1.05);
     }
 
     .profile-text {
@@ -61,12 +86,36 @@
 
     .username {
       font-size: 1rem;
-      text-shadow: 0 0 10px white;
+      background: linear-gradient(270deg, #b8a0f9, #e4dbff, #a17eff);
+      background-size: 600% 600%;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      animation: gradient 12s ease infinite;
+      text-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
+      transition: transform 0.2s ease, filter 0.2s ease;
+
     }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+
 
     .subtext {
       font-size: 0.6rem;
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       white-space: nowrap;
       overflow: hidden;
     }
@@ -241,8 +290,6 @@
       .avatar {
         width: 100px;
         height: 100px;
-        border-radius: 99px;
-        flex-shrink: 0;
       }
 
       .username {
@@ -291,9 +338,6 @@
         justify-content: center;
       }
     }
-
-
-    Í
   </style>
 </head>
 
