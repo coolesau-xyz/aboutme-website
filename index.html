@@ -19,15 +19,24 @@
       height: 100%;
       font-family: 'Press Start 2P', monospace;
       background-color: black;
-      background-image: url('assets/background.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
       color: white;
-      overflow: hidden;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+
+    .hero {
+      height: 100vh;
+      background: url('assets/background.jpg') no-repeat center center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .main-content {
+      background-color: black;
+      min-height: 100vh;
+      padding: 4rem 2rem;
     }
 
     .card {
@@ -291,6 +300,18 @@
 
     @media (max-width: 600px) {
 
+      html,
+      body {
+        height: 100%;
+        font-family: 'Press Start 2P', monospace;
+        background-color: black;
+        background-image: url('assets/background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+      }
+
       .avatar {
         width: 100px;
         height: 100px;
@@ -347,57 +368,63 @@
 
 <body>
 
-  <div class="card">
-    <div class="profile-row">
-      <img src="assets/avatar.png" alt="avatar" class="avatar" />
-      <div class="profile-text">
-        <div class="username-badge-row">
-          <div class="username">cooleSau</div>
-          <div class="badge-container">
-            <div class="badge-icon" data-title="CEO of Sideprojects" style="filter: drop-shadow(0 0 5px #fcf400);"><img
-                src="assets/ceo.png" alt="CEO" /></div>
-            <div class="badge-icon" data-title="Knowledge Seeker" style="filter: drop-shadow(0 0 5px #669afe);"><img
-                src="assets/student.png" alt="Student" /></div>
-            <div class="badge-icon" data-title="App Architect" style="filter: drop-shadow(0 0 5px #f47c64);"><img
-                src="assets/app.png" alt="Flutter App" /></div>
-            <div class="badge-icon" data-title="Bug Hunter" style="filter: drop-shadow(0 0 5px #2ca964);"><img
-                src="assets/bughunter.png" alt="Bughunter" /></div>
-            <div class="badge-icon" data-title="Repository Hunter" style="filter: drop-shadow(0 0 5px #ffffff);"><img
-                src="assets/github.png" alt="GitHub" /></div>
+  <div class="hero">
+
+    <div class="card">
+      <div class="profile-row">
+        <img src="assets/avatar.png" alt="avatar" class="avatar" />
+        <div class="profile-text">
+          <div class="username-badge-row">
+            <div class="username">cooleSau</div>
+            <div class="badge-container">
+              <div class="badge-icon" data-title="CEO of Sideprojects" style="filter: drop-shadow(0 0 5px #fcf400);">
+                <img src="assets/ceo.png" alt="CEO" />
+              </div>
+              <div class="badge-icon" data-title="Knowledge Seeker" style="filter: drop-shadow(0 0 5px #669afe);"><img
+                  src="assets/student.png" alt="Student" /></div>
+              <div class="badge-icon" data-title="App Architect" style="filter: drop-shadow(0 0 5px #f47c64);"><img
+                  src="assets/app.png" alt="Flutter App" /></div>
+              <div class="badge-icon" data-title="Bug Hunter" style="filter: drop-shadow(0 0 5px #2ca964);"><img
+                  src="assets/bughunter.png" alt="Bughunter" /></div>
+              <div class="badge-icon" data-title="Repository Hunter" style="filter: drop-shadow(0 0 5px #ffffff);"><img
+                  src="assets/github.png" alt="GitHub" /></div>
+            </div>
+          </div>
+          <div class="subtext" id="typewriter">
+            <span id="typewriter-text"></span><span class="cursor"></span>
           </div>
         </div>
-        <div class="subtext" id="typewriter">
-          <span id="typewriter-text"></span><span class="cursor"></span>
-        </div>
+      </div>
+
+      <div class="badges">
+
+        <div class="badge html"><i class="fab fa-html5"></i> HTML</div>
+        <div class="badge css"><i class="fab fa-css3-alt"></i> CSS</div>
+        <div class="badge dart"><i class="fa-brands fa-dart-lang"></i> Dart</div>
+        <div class="badge flutter"><i class="fa-brands fa-flutter"></i> Flutter</div>
+      </div>
+
+      <div class="links">
+        <a target="_blank" href="https://discord.com/users/752439049460908072" title="Discord"><img
+            src="assets/discord.png" alt="Discord" /></a>
+        <a target="_blank" href="https://github.com/coolesau-xyz" title="GitHub"><img src="assets/github2.png"
+            alt="Github" /></a>
+        <a target="_blank" href="mailto:office@coolesau.xyz" title="Email"><img src="assets/mailbox.png"
+            alt="Email" /></a>
+        <a target="_blank" href="https://www.twitch.tv/coolesau_" title="Email"><img src="assets/twitch.png"
+            alt="Email" /></a>
+        <a target="_blank" href="https://steamcommunity.com/id/cooleSau_/" title="Email"><img src="assets/steam.png"
+            alt="Email" /></a>
+
       </div>
     </div>
-
-    <div class="badges">
-
-      <div class="badge html"><i class="fab fa-html5"></i> HTML</div>
-      <div class="badge css"><i class="fab fa-css3-alt"></i> CSS</div>
-      <div class="badge dart"><i class="fa-brands fa-dart-lang"></i> Dart</div>
-      <div class="badge flutter"><i class="fa-brands fa-flutter"></i> Flutter</div>
-    </div>
-
-    <div class="links">
-      <a target="_blank" href="https://discord.com/users/752439049460908072" title="Discord"><img
-          src="assets/discord.png" alt="Discord" /></a>
-      <a target="_blank" href="https://github.com/coolesau-xyz" title="GitHub"><img src="assets/github2.png"
-          alt="Github" /></a>
-      <a target="_blank" href="mailto:office@coolesau.xyz" title="Email"><img src="assets/mailbox.png"
-          alt="Email" /></a>
-      <a target="_blank" href="https://www.twitch.tv/coolesau_" title="Email"><img src="assets/twitch.png"
-          alt="Email" /></a>
-      <a target="_blank" href="https://steamcommunity.com/id/cooleSau_/" title="Email"><img src="assets/steam.png"
-          alt="Email" /></a>
-
-    </div>
+  </div>
+  <div class="main-content">
   </div>
 
   <script>
     const texts = [
-      "Welcome on my side!",
+      "Welcome on måçy side!",
       "Creator of digital chaos.",
       "Sideprojects > Sleep.",
       "Code. Coffee. Repeat.",
