@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>cooleSau</title>
+  <link rel="icon" type="image/png" href="assets/icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/e2b725af42.js" crossorigin="anonymous"></script>
   <style>
@@ -22,6 +23,80 @@
       color: white;
       overflow-x: hidden;
       scroll-behavior: smooth;
+    }
+
+    .glass-navbar {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(106, 106, 106, 0.117);
+      border-radius: 50px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    .glass-nav-inner {
+      display: flex;
+      gap: 1.4rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .glass-item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.6rem 0.8rem;
+      border-radius: 50px;
+      color: white;
+      text-decoration: none;
+      font-size: 0.7rem;
+      /* Etwas kleiner für bessere Balance */
+      font-family: 'Press Start 2P', monospace;
+      transition: background 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+      line-height: 1;
+      /* Wichtig */
+    }
+
+    .glass-nav-inner {
+      display: flex;
+      gap: 1.4rem;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4rem 0.6rem;
+      /* neu */
+    }
+
+    .glass-item span {
+      display: inline-block;
+      line-height: 1;
+      position: relative;
+      top: 1px;
+      font-size: 0.8rem;
+    }
+
+    .glass-item i {
+      font-size: 1rem;
+      vertical-align: middle;
+      display: flex;
+      align-items: center;
+    }
+
+    .glass-item:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+    }
+
+    @media (max-width: 600px) {
+
+      .glass-item {
+        padding: 0.4rem;
+        font-size: 1rem;
+      }
     }
 
 
@@ -300,12 +375,14 @@
 
     @media (max-width: 600px) {
       .hero {
-        height: 100vh;
-        background: url('assets/background.jpg') no-repeat center center/cover;
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-bottom: env(safe-area-inset-bottom);
+        /* iOS Support */
       }
+      
 
       .avatar {
         width: 100px;
@@ -362,6 +439,17 @@
 </head>
 
 <body>
+
+  <header class="glass-navbar">
+    <nav class="glass-nav-inner">
+      <a href="#home" class="glass-item" title="Home">
+        <i class="fas fa-home"></i><span>Home</span>
+      </a>
+      <a href="#projects" class="glass-item" title="Projects">
+        <i class="fa-solid fa-box-archive"></i></i><span>Projects</span>
+      </a>
+    </nav>
+  </header>
 
   <div class="hero">
 
