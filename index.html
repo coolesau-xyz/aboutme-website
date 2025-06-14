@@ -76,39 +76,87 @@
       </div>
     </div>
   </div>
-  <div class="main-content" id="projects"
-    style="display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: 'Press Start 2P', monospace; color: white;">
-    <div style="text-align: center;">
+
+  <div id="projects" class="projects">
+    <h2 class="section-title">My Projects</h2>
+
+
+    <div class="projects-container">
+      <!-- Projekt 1 -->
+      <div class="project-card">
+        <img src="assets/website.png" alt="PixelBoard">
+        <div class="card-header">
+          <h3>Website</h3>
+          <span class="project-status status-beta">Beta</span>
+        </div>
+        <p>A pixel-styled homepage mockup representing my personal website</p>
+        <a href="projects/website.html" class="project-link">View Project</a>
+      </div>
+
+      <!-- Projekt 2 -->
+      <div class="project-card">
+        <img src="assets/app_image.png" alt="DailyFocus">
+        <div class="card-header">
+          <h3>Mobile App</h3>
+          <span class="project-status status-secret">Secret</span>
+        </div>
+        <p>???</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+    </div>
+    <div style="
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  padding-bottom: 12px;
+  flex-direction: column;
+  align-items: center;
+">
+      <!-- Haupt-Footer im Glas-Stil -->
+      <footer style="
+    text-align: center;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.7rem;
+    color: white;
+    background: rgba(152, 152, 152, 0.117);
+    border-radius: 50px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 24px;
+    display: inline-block;
+  ">
+        &copy;
+        <script>document.write(new Date().getFullYear())</script> cooleSau ·
+        <a href="https://github.com/coolesau-xyz" target="_blank" style="color: #ffca28; text-decoration: none;">
+          GitHub
+        </a>
+      </footer>
+
+      <!-- Ausgegraute Links darunter -->
       <div style="
-      font-size: 1rem;
-      animation: pulse 1.5s infinite;
-      color: #ffffff;
-      text-shadow: 0 0 10px #ffffff33;
-    ">
-        Coming soon...
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.55rem;
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+  ">
+        <a href="important/impressum.html" style="color: rgba(255,255,255,0.4); text-decoration: none; margin-right: 16px;">
+          Impressum
+        </a>
+        <a href="important/datenschutz.html" style="color: rgba(255,255,255,0.4); text-decoration: none;">
+          Datenschutz
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- Animation direkt eingebettet -->
-  <style>
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-        opacity: 0.8;
-      }
 
-      50% {
-        transform: scale(1.05);
-        opacity: 1;
-      }
 
-      100% {
-        transform: scale(1);
-        opacity: 0.8;
-      }
-    }
-  </style>
+
+
 
   <script>
     const texts = [

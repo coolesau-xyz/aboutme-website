@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Project</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/website.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e2b725af42.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="website-body">
+    <div class="frame-wrapper">
+        <div class="pixel-frame-outer">
+            <div class="pixel-frame-mid">
+                <div class="pixel-frame-inner">
+
+                    <h1 class="project-title">
+                        <span>Website Project</span>
+                        <span class="status-badge">BETA</span>
+                    </h1>
+                    <p class="subtitle">An custom About Me Website</p>
+
+                    <p class="description">
+                        This website is my personal playground. I wanted a site that shows not only information but also
+                        style.
+                        Everything is custom-built in an 8-bit retro look using HTML and CSS.
+                    </p>
+
+                    <div class="badges">
+
+                        <div class="badge html"><i class="fab fa-html5"></i> HTML</div>
+                        <div class="badge css"><i class="fab fa-css3-alt"></i> CSS</div>
+                        <div class="badge flutter"><i class="fa-brands fa-flutter"></i> JavaScript</div>
+                    </div>
+                    <h2 class="section-heading">Screenshots</h2>
+                    <div class="gallery-wrapper">
+                        <button class="gallery-arrow left">
+                            <img src="/assets/arrow-left.png" alt="Left" class="arrow-icon">
+                        </button>
+
+                        <div class="gallery-track">
+                            <img src="/assets/website1.png" alt="Screenshot 1" class="gallery-img">
+                            <img src="/assets/website2.png" alt="Screenshot 2" class="gallery-img">
+                        </div>
+
+                        <button class="gallery-arrow right">
+                            <img src="/assets/arrow-right.png" alt="Right" class="arrow-icon">
+                        </button>
+                    </div>
+
+                    <div id="gallery-modal" class="gallery-modal">
+                        <span class="gallery-close">&times;</span>
+                        <img class="gallery-modal-content" id="modal-image">
+                    </div>
+
+
+                    <h3 class="sub-heading">Features</h3>
+                    <ul class="list">
+                        <li>Glass Navbar</li>
+                        <li>Animated typewriter effect</li>
+                        <li>Interactive badges with hover tooltips</li>
+                        <li>Pixel-art styled project cards</li>
+                        <li>Retro buttons with shadow animations</li>
+                        <li>Custom icon links (Discord, GitHub, etc.)</li>
+                    </ul>
+
+                    <h3 class="sub-heading">Tech Stack</h3>
+                    <ul class="list">
+                        <li>HTML and CSS based implementation</li>
+                        <li>Hand-crafted animations and effects</li>
+                        <li>Custom layout and component styling</li>
+                    </ul>
+
+                    <h3 class="sub-heading">Repository</h3>
+                    <ul class="list">
+                        <li>Combining my basic HTML and CSS Knowledge with a Pixeltheme & JavaScript for Animations</li>
+                    </ul>
+
+                    <h3 class="sub-heading">Files</h3>
+                    <ul class="list">
+                        <li>The full source code is available on <a href="https://github.com/coolesau-xyz"
+                                target="_blank">GitHub</a>.</li>
+                        <li>If you use parts of this project publicly, visible credits to <strong>coolesau.xyz</strong>
+                            are required.</li>
+                        <li>If you support the project with a small donation, you're free to use it without attribution.
+                        </li>
+                        <li>Donate via <a href="https://paypal.me/coolesauxyz" target="_blank">PayPal</a> 💛</li>
+                    </ul>
+
+
+                    <div class="back-button-container">
+                        <a href="/index.html#projects" class="pixel-button">&#x2190; Back to Projects</a>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox hidden">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">
+                <img src="/assets/close.png" alt="Close" class="close-icon">
+            </button>
+            <img id="lightboxImage" src="" alt="Enlarged Screenshot" class="lightbox-image">
+        </div>
+    </div>
+
+    <div style="
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  padding-bottom: 12px;
+  flex-direction: column;
+  align-items: center;
+">
+      <!-- Haupt-Footer im Glas-Stil -->
+      <footer style="
+    text-align: center;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.7rem;
+    color: white;
+    background: rgba(152, 152, 152, 0.117);
+    border-radius: 50px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 24px;
+    display: inline-block;
+  ">
+        &copy;
+        <script>document.write(new Date().getFullYear())</script> cooleSau ·
+        <a href="https://github.com/coolesau-xyz" target="_blank" style="color: #ffca28; text-decoration: none;">
+          GitHub
+        </a>
+      </footer>
+
+      <!-- Ausgegraute Links darunter -->
+      <div style="
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.55rem;
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+  ">
+        <a href="important/impressum.html" style="color: rgba(255,255,255,0.4); text-decoration: none; margin-right: 16px;">
+          Impressum
+        </a>
+        <a href="important/datenschutz.html" style="color: rgba(255,255,255,0.4); text-decoration: none;">
+          Datenschutz
+        </a>
+      </div>
+    </div>
+
+    <script>
+        const track = document.querySelector('.gallery-track');
+        const left = document.querySelector('.gallery-arrow.left');
+        const right = document.querySelector('.gallery-arrow.right');
+
+        left?.addEventListener('click', () => {
+            track.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        right?.addEventListener('click', () => {
+            track.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') left?.click();
+            if (e.key === 'ArrowRight') right?.click();
+        });
+    </script>
+    <script>
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightboxImage");
+        const closeBtn = document.getElementById("lightboxClose");
+
+        document.querySelectorAll(".gallery-img").forEach(img => {
+            img.addEventListener("click", () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.remove("hidden");
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            lightbox.classList.add("hidden");
+        });
+
+        window.addEventListener("keydown", e => {
+            if (e.key === "Escape") lightbox.classList.add("hidden");
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) lightbox.classList.add("hidden");
+        });
+    </script>
+</body>
+
+</html>
