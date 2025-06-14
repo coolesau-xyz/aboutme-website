@@ -2,7 +2,18 @@
 
 A retro-inspired portfolio built entirely with HTML & CSS – no frameworks, no fluff. Just pure pixel perfection.
 
-![Screenshot](./assets/website1.png)
+## 📄 Usage & Credits
+
+You are welcome to use parts of this project in your own website or portfolio.
+
+However, if you do so **publicly**, please add a visible credit such as:
+
+> "Design inspired by [coolesau.xyz](https://coolesau.xyz)"
+
+Alternatively, if you support the project with a small donation 💛 via [PayPal](https://paypal.me/coolesauxyz),  
+**no credit is required**.
+
+Thanks for respecting the creator!
 
 ---
 
